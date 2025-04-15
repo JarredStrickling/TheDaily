@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuck of the Day</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin-top: 50px;
+    }
+    h1 {
+      font-size: 3em;
+      color: #cc0000;
+    }
+    img {
+      max-width: 300px;
+      border: 3px solid #555;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cuck of the Day</h1>
+  <img id="cuck-image" src="" alt="Cuck of the Day">
+
+  <script>
+    const images = [
+      "cuck1.jpg",
+      "cuck2.jpg",
+      "cuck3.jpg",
+      "cuck4.jpg",
+      "cuck5.jpg",
+      "cuck6.jpg",
+      "cuck7.jpg"
+    ];
+
+    // Change daily based on number of days since Jan 1, 2024
+    const startDate = new Date('2024-01-01');
+    const today = new Date();
+    const diffInDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+    const index = diffInDays % images.length;
+
+    document.getElementById("cuck-image").src = images[index];
+  </script>
+</body>
+</html>
